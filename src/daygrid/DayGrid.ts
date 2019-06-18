@@ -624,7 +624,7 @@ export default class DayGrid extends DateComponent<DayGridProps> {
       }
     }
 
-    if (levelLimit && levelLimit < rowStruct.segLevels.length) { // is it actually over the limit?
+    if (levelLimit && levelLimit > 0 && levelLimit < rowStruct.segLevels.length) { // is it actually over the limit?
       levelSegs = rowStruct.segLevels[levelLimit - 1]
       cellMatrix = rowStruct.cellMatrix
 
